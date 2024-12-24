@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "../../../images/2 6.png";
+import Popup from "../OurSpecializedServices/Popup"; // Assuming Popup component is correctly imported
 
 const HomeService = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false); 
+
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true); 
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false); 
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    alert("Form submitted!");
+    setIsPopupOpen(false); // Close the popup after form submission
+  };
+
   return (
-    <div className=" bg-[#FF8800] p-6 md:p-8 lg:p-12 rounded-xl">
+    <div className="bg-[#FF8800] p-6 md:p-8 lg:p-12 rounded-xl">
       {/* Header Text */}
       <h2 className="text-white text-2xl md:text-3xl lg:text-4xl text-center mb-6 md:mb-8">
         Expert Home Services Tailored to Your Needs
@@ -30,10 +47,21 @@ const HomeService = () => {
         <h2 className="text-white text-lg md:text-xl lg:text-2xl font-semibold">
           Your comfort is our priority.
         </h2>
-        <button className="bg-white text-[#FF8800] px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+        <button 
+          onClick={handleOpenPopup}
+          className="bg-white text-[#FF8800] px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+        >
           Book Now
         </button>
       </div>
+
+      {/* Popup Component */}
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={handleClosePopup}
+        onSubmit={handleFormSubmit}
+        formTitle="Book Now"
+      />
     </div>
   );
 };

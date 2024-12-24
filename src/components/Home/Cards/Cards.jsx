@@ -2,11 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaTag, FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import img1 from '../../../images/facewash.avif';
-import img2 from '../../../images/safola oil.avif';
-import img3 from '../../../images/soap1.avif';
-import img4 from '../../../images/fruits.avif';
-import img5 from '../../../images/electric.avif';
+import img1 from "../../../images/facewash.avif";
+import img2 from "../../../images/safola oil.avif";
+import img3 from "../../../images/soap1.avif";
+import img4 from "../../../images/fruits.avif";
+import img5 from "../../../images/electric.avif";
+import { MdRemoveRedEye } from "react-icons/md";
+import { FaCartShopping } from "react-icons/fa6";
+
+
 
 const Cards = () => {
   // Static product data
@@ -123,7 +127,11 @@ const Cards = () => {
                   className="object-cover w-full h-48 p-4"
                 />
                 <div className="absolute top-1 left-1 bg-[#ff8800] text-white px-2 py-1 rounded-full text-xs flex items-center">
-                  <FaTag className="mr-1" /> {Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)}% OFF
+                  <FaTag className="mr-1" />{" "}
+                  {Math.round(
+                    ((product.oldPrice - product.price) / product.oldPrice) * 100
+                  )}
+                  % OFF
                 </div>
                 <div className="absolute top-1 right-1 text-white px-2 py-1 rounded-full text-xs flex items-center">
                   <AiOutlineHeart className="w-5 h-5 inline text-[#ff8800]" />
@@ -158,6 +166,19 @@ const Cards = () => {
                 </div>
               </div>
             </Link>
+
+            {/* Hover buttons */}
+            <div className="absolute inset-0 bg-black bg-opacity-10 opacity-10 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center space-x-4">
+              <button className="px-2 py-1 bg-[#ff8800] text-white rounded-md opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+              <MdRemoveRedEye/>
+              </button>
+              <button className="px-2 py-1 text-xs  bg-[#ff8800] text-white rounded-md opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                 View Offer
+              </button>
+              <button className="px-2 py-1 bg-[#ff8800] text-white rounded-md opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+              <FaCartShopping/>
+              </button>
+            </div>
           </div>
         ))}
       </div>
@@ -166,8 +187,6 @@ const Cards = () => {
           See All
         </button>
       </div>
-
-
     </div>
   );
 };

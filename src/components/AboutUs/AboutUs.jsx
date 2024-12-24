@@ -7,11 +7,11 @@ const AboutUs = () => {
   return (
     <>
       <div>
-        <AboutBanner/>
+        <AboutBanner />
         <Content />
-        <TeamSection/>
+        <TeamSection />
         <Section />
-            </div>
+      </div>
     </>
   );
 }

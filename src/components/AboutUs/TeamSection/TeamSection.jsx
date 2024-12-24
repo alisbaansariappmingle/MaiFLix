@@ -27,7 +27,7 @@ const TeamSection = () => {
             className="w-40 h-40 mx-auto rounded-full mb-4 shadow-lg"
           />
           <h3 className="text-lg font-semibold">Albert</h3>
-          <p className="text-gray-500 text-sm">Software Engineer</p>
+          <p className="text-gray-500 text-sm">HR</p>
         </div>
 
         {/* Team Member 2 */}
@@ -67,7 +67,7 @@ const TeamSection = () => {
             className="w-40 h-40 mx-auto rounded-full mb-4 shadow-lg"
           />
           <h3 className="text-lg font-semibold">Albert</h3>
-          <p className="text-gray-500 text-sm">Chef</p>
+          <p className="text-gray-500 text-sm">Customer Care</p>
         </div>
         
       </div>

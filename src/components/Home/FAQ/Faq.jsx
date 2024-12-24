@@ -10,8 +10,8 @@ const Faq = () => {
       answer: 'You can hire domestic help through our simple process: Fill out the requirement form, browse through verified profiles, schedule interviews, and select your preferred candidate. Our team will assist you throughout the process.'
     },
     {
-      question: 'What if I\'m not satisfied with the services?',
-      answer: 'We have a satisfaction guarantee policy. If you\'re not satisfied, you can report your concerns within the first week. We\'ll either provide a replacement or process a refund according to our terms.'
+      question: 'What if I am not satisfied with the services?',
+      answer: 'We have a satisfaction guarantee policy. If you are not satisfied, you can report your concerns within the first week. We\'ll either provide a replacement or process a refund according to our terms.'
     },
     {
       question: 'How much will a cook/maid/babysitter cost in Delhi NCR?',

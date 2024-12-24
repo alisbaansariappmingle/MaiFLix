@@ -4,12 +4,22 @@ import { IoCart } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import { TiLocation } from "react-icons/ti";
+import logo from '../../images/logo.png';
+import { FaHandsHelping } from "react-icons/fa";
+import LoginPopup from './LoginPopup';
+
 
 const Underline = () => (
   <div className="absolute -bottom-1 rounded left-0 w-full h-[4px] bg-[#ff8800] scale-x-0 group-hover:scale-x-100 transition-all duration-300 origin-left"></div>
 );
 
 const Header = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen((prev) => !prev);
+  };
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -68,10 +78,13 @@ const Header = () => {
           </button>
 
           {/* Logo */}
-          <div className="text-[#ff8800] font-bold text-2xl sm:text-3xl md:text-2xl lg:text-3xl">Maiflix</div>
+          <div className="flex items-center space-x-2 text-[#ff8800] font-bold text-2xl sm:text-3xl md:text-2xl lg:text-3xl">
+            <img src={logo} alt="Maiflix Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
+            <span>Maiflix</span>
+          </div>
           <button
             className="download-button w-12 text-3xl pl-2 block md:hidden text-[#ff8800] font-bold h-9 focus:outline-none"
-            // onClick={downloadFile}
+          // onClick={downloadFile}
           >
             <LiaFileDownloadSolid />
           </button>
@@ -100,11 +113,8 @@ const Header = () => {
               </NavLink>
               <Underline />
             </li>
-            <li id="services-dropdown" className="relative">
-              <button
-                onClick={toggleDropdown}
-                className="flex items-center text-gray-800 hover:text-[#ff8800]"
-              >
+            <li id="services-dropdown" className="relative group">
+              <button className="flex items-center text-gray-800 hover:text-[#ff8800]">
                 Services
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,35 +132,105 @@ const Header = () => {
                 </svg>
               </button>
               <Underline />
-              {isDropdownOpen && (
-                <ul className="absolute left-0 top-full mt-4 bg-white shadow-lg rounded-lg w-48 z-10">
-                  <li>
-                    <NavLink
-                      to="/services/web-development"
-                      className="block px-4 py-2 text-black hover:bg-[#ff8800] hover:text-white"
-                    >
-                      Web Development
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/services/mobile-development"
-                      className="block px-4 py-2 text-black hover:bg-[#ff8800] hover:text-white"
-                    >
-                      Mobile Development
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/services/seo"
-                      className="block px-4 py-2 text-black hover:bg-[#ff8800] hover:text-white"
-                    >
-                      SEO
-                    </NavLink>
-                  </li>
-                </ul>
-              )}
+
+              {/* Mega Menu - Shows on hover */}
+              <div className="relative group">
+                <div className="absolute top-full mt-6 bg-white shadow-lg rounded-lg w-[600px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 left-1/2 transform -translate-x-1/2">
+                  <div className="grid grid-cols-2 gap-6 px-6 py-6">
+                    <div>
+                      <ul className="space-y-4 text-sm text-gray-600">
+                        <li>
+                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
+                            <div className="flex items-center">
+                              <span className="rounded-full p-1 bg-orange-500 mr-2">
+                                <FaHandsHelping className="text-white" size={16} />
+                              </span>
+                              <span>DOMESTIC HELPER</span>
+
+                            </div>
+                            <p className="text-sm text-gray-500">Here Some Description</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
+                            <div className="flex items-center">
+                              <span className="rounded-full p-1 bg-orange-500 mr-2">
+                                <FaHandsHelping className="text-white" size={16} />
+                              </span>
+                              <span>Babysitter/ Japa</span>
+
+                            </div>
+                            <p className="text-sm text-gray-500">Here Some Description</p>
+
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
+                            <div className="flex items-center">
+                              <span className="rounded-full p-1 bg-orange-500 mr-2">
+                                <FaHandsHelping className="text-white" size={16} />
+                              </span>
+                              <span>COOK</span>
+
+                            </div>
+                            <p className="text-sm text-gray-500">Here Some Description</p>
+
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <ul className="space-y-4 text-sm text-gray-600">
+                        <li>
+                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
+                            <div className="flex items-center">
+                              <span className="rounded-full p-1 bg-orange-500 mr-2">
+                                <FaHandsHelping className="text-white" size={16} />
+                              </span>
+                              <span>ALL IN ONE</span>
+
+                            </div>
+                            <p className="text-sm text-gray-500 pl-7">Here Some Description</p>
+
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
+                            <div className="flex items-center">
+                              <span className="rounded-full p-1 bg-orange-500 mr-2">
+                                <FaHandsHelping className="text-white" size={16} />
+                              </span>
+                              <span>PART TIMER</span>
+
+                            </div>
+                            <p className="text-sm text-gray-500">Here Some Description</p>
+
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
+                            <div className="flex items-center">
+                              <span className="rounded-full p-1 bg-orange-500 mr-2">
+                                <FaHandsHelping className="text-white" size={16} />
+                              </span>
+                              <span>24 HRS ALL ROUNDER</span>
+
+                            </div>
+                            <p className="text-sm text-gray-500">Here Some Description</p>
+
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </li>
+
+
             <li className="relative group">
               <NavLink
                 to="/pricing"
@@ -160,6 +240,7 @@ const Header = () => {
               >
                 Pricing
               </NavLink>
+              {isPopupOpen && <LoginPopup onClose={togglePopup} />}
               <Underline />
             </li>
             <li className="relative group">
@@ -178,7 +259,8 @@ const Header = () => {
           {/* Right Section */}
           <div className="flex items-center space-x-4 md:space-x-10 text-md font-bold">
             <NavLink
-              to="/login"
+              // to="/login"
+              onClick={togglePopup} 
               className={({ isActive }) =>
                 isActive
                   ? "text-[#ff8800] font-bold underline"
@@ -282,35 +364,25 @@ const Header = () => {
                 </svg>
               </button>
               {isMobileDropdownOpen && (
-                <ul className="mt-2 bg-white shadow-lg rounded-lg w-full">
-                  <li>
-                    <NavLink
-                      to="/services/web-development"
-                      className="block px-4 py-2 text-black hover:bg-[#ff8800] hover:text-white"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Web Development
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/services/mobile-development"
-                      className="block px-4 py-2 text-black hover:bg-[#ff8800] hover:text-white"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Mobile Development
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/services/seo"
-                      className="block px-4 py-2 text-black hover:bg-[#ff8800] hover:text-white"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      SEO
-                    </NavLink>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-2 gap-8 px-1 py-6 border-2 border-gray-500 rounded-md">
+                  <div>
+                    {/* <h4 className="text-lg font-semibold text-gray-800">Web Development</h4> */}
+                    <ul className="space-y-2 text-xs text-gray-600">
+                      <li><NavLink to="/services/web-development" className="hover:text-[#ff8800]">DOMESTIC HELPER</NavLink></li>
+                      <li><NavLink to="/services/e-commerce" className="hover:text-[#ff8800]">COOK</NavLink></li>
+                      <li><NavLink to="/services/custom-web-design" className="hover:text-[#ff8800]">BABYSITTER/ JAPA</NavLink></li>
+                    </ul>
+                  </div>
+                  <div>
+                    {/* <h4 className="text-lg font-semibold text-gray-800">Mobile Development</h4> */}
+                    <ul className="space-y-2 text-xs text-gray-600">
+                      <li><NavLink to="/services/mobile-development" className="hover:text-[#ff8800]">ALL IN ONE</NavLink></li>
+                      <li><NavLink to="/services/android-apps" className="hover:text-[#ff8800]">PART TIMER</NavLink></li>
+                      <li><NavLink to="/services/ios-apps" className="hover:text-[#ff8800]"> 24 Hrs ALL ROUNDERE</NavLink></li>
+                    </ul>
+                  </div>
+
+                </div>
               )}
             </li>
             <li>

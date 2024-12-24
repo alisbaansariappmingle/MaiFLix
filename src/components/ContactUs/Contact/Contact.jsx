@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import contact from "../../images/contactus.png";
+import contact from "../../../images/contactus.png";
 import { IoCall } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
-
-
-
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -42,18 +39,25 @@ const Contact = () => {
                         <h5 className="text-orange-500 font-bold text-lg lg:text-xl">Contact Us</h5>
                         <h1 className="text-2xl lg:text-3xl font-semibold">Talk To Us</h1>
                         <p className="text-sm lg:text-base">Your feedback is invaluable to us. If you have questions and suggestions, we're here to listen.  Please reach out to us below details:</p>
-                        <div className="flex items-center justify-center lg:justify-start mt-4">
-                            <i className="fas fa-phone-alt text-orange-500 mr-2 text-3xl"> <IoCall/></i>
-                            <span className="text-sm lg:text-base">+1 234 567 890</span>
+                        <div className="flex items-center space-x-8 mt-4">
+                            {/* Phone */}
+                            <div className="flex items-center">
+                                <IoCall className="text-orange-500 mr-2 text-3xl" />
+                                <span className="text-sm lg:text-base">9079303071</span>
+                            </div>
+
+                            {/* Email */}
+                            <div className="flex items-center">
+                                <IoMail className="text-orange-500 mr-2 text-3xl" />
+                                <span className="text-sm lg:text-base">info@maiflix.in</span>
+                            </div>
                         </div>
-                        <div className="flex items-center justify-center lg:justify-start mt-2">
-                            <i className="fas fa-phone-alt text-orange-500 mr-2 text-3xl"> <IoMail/></i>
-                            <span className="text-sm lg:text-base">Email@123.com</span>
+                        {/* Address */}
+                        <div className="flex items-center pt-3">
+                            <FaLocationDot className="text-orange-500 mr-2 text-3xl" />
+                            <span className="text-sm lg:text-base">1206,Suryakiran Building, 19 K G Marg New Delhi-110001.</span>
                         </div>
-                        <div className="flex items-center justify-center lg:justify-start mt-2">
-                            <i className="fas fa-phone-alt text-orange-500 mr-2 text-3xl"> <FaLocationDot/></i>
-                            <span className="text-sm lg:text-base">Adress..</span>
-                        </div>
+
                     </div>
                     <div className="w-full max-w-md">
                         <img src={contact} alt="Contact Us" className="w-full h-auto" />
@@ -89,12 +93,18 @@ const Contact = () => {
                                 Contact Number
                             </label>
                             <input
-                                type="phone"
+                                type="text"
                                 id="number"
                                 value={formData.number}
-                                onChange={handleChange}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    // Allow only numeric characters and limit to 10 digits
+                                    if (/^[0-9+\-\s]*$/.test(value)) {
+                                        setFormData({ ...formData, number: value });
+                                    }
+                                }}
                                 className="w-full border-2 border-gray-250 rounded-lg shadow-sm focus:ring-yellow-500 focus:border-yellow-500 p-3"
-                                placeholder="Enter Your Number"
+                                placeholder="Enter Your Mobile Number"
                             />
                         </div>
 
