@@ -5,8 +5,11 @@ import { FaSearch } from "react-icons/fa";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import { TiLocation } from "react-icons/ti";
 import logo from '../../images/logo.png';
-import { FaHandsHelping } from "react-icons/fa";
+// import { FaHandsHelping } from "react-icons/fa";
 import LoginPopup from './LoginPopup';
+import image from '../../images/Figure_img-2.jpg';
+import ComingSoon from '../ComingSoon/ComingSoon'; 
+// import LoginPopup from './LoginPopup';
 
 
 const Underline = () => (
@@ -15,9 +18,27 @@ const Underline = () => (
 
 const Header = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  const [isComingSoonOpen, setIsComingSoonOpen] = useState(false); 
+  const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
   const togglePopup = () => {
     setIsPopupOpen((prev) => !prev);
+  };
+
+  const openComingSoon = () => {
+    console.log(isComingSoonOpen);
+    
+    setIsComingSoonOpen(!isComingSoonOpen);
+  };
+
+  const closeComingSoon = () => {
+    console.log(isComingSoonOpen)
+    setIsComingSoonOpen(!isComingSoonOpen);
+  };
+  const openLoginPopup = () => {
+    setIsLoginPopupOpen(true); // Open the login popup
+  };
+  const closeLoginPopup = () => {
+    setIsLoginPopupOpen(false);
   };
 
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -63,7 +84,6 @@ const Header = () => {
   const toggleDropdown = () => setDropdownOpen((prev) => !prev);
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
   const toggleMobileDropdown = () => setMobileDropdownOpen((prev) => !prev);
-
   return (
     <div className="relative w-full">
       {/* Main Navigation */}
@@ -135,6 +155,8 @@ const Header = () => {
 
               {/* Mega Menu - Shows on hover */}
               <div className="relative group">
+                {/* <div className="relative top-[20px] left-1/2 transform -translate-x-2/2 w-4 h-4 bg-white rotate-45 shadow"></div> */}
+
                 <div className="absolute top-full mt-6 bg-white shadow-lg rounded-lg w-[600px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 left-1/2 transform -translate-x-1/2">
                   <div className="grid grid-cols-2 gap-6 px-6 py-6">
                     <div>
@@ -142,25 +164,33 @@ const Header = () => {
                         <li>
                           <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
                             <div className="flex items-center">
-                              <span className="rounded-full p-1 bg-orange-500 mr-2">
-                                <FaHandsHelping className="text-white" size={16} />
+                              <span className="mr-2">
+                                <img
+                                  src={image}
+                                  alt="icon"
+                                  className="w-7 h-7 rounded-full"
+                                />
                               </span>
                               <span>DOMESTIC HELPER</span>
 
                             </div>
-                            <p className="text-sm text-gray-500">Here Some Description</p>
+                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
                           </a>
                         </li>
                         <li>
                           <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
                             <div className="flex items-center">
-                              <span className="rounded-full p-1 bg-orange-500 mr-2">
-                                <FaHandsHelping className="text-white" size={16} />
+                              <span className="mr-2">
+                                <img
+                                  src={image}
+                                  alt="icon"
+                                  className="w-7 h-7 rounded-full"
+                                />
                               </span>
-                              <span>Babysitter/ Japa</span>
+                              <span>BABYSITTER/JAPA</span>
 
                             </div>
-                            <p className="text-sm text-gray-500">Here Some Description</p>
+                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
 
                           </a>
                         </li>
@@ -168,13 +198,17 @@ const Header = () => {
                         <li>
                           <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
                             <div className="flex items-center">
-                              <span className="rounded-full p-1 bg-orange-500 mr-2">
-                                <FaHandsHelping className="text-white" size={16} />
+                              <span className="mr-2">
+                                <img
+                                  src={image}
+                                  alt="icon"
+                                  className="w-7 h-7 rounded-full"
+                                />
                               </span>
                               <span>COOK</span>
 
                             </div>
-                            <p className="text-sm text-gray-500">Here Some Description</p>
+                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
 
                           </a>
                         </li>
@@ -186,39 +220,51 @@ const Header = () => {
                         <li>
                           <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
                             <div className="flex items-center">
-                              <span className="rounded-full p-1 bg-orange-500 mr-2">
-                                <FaHandsHelping className="text-white" size={16} />
+                              <span className="mr-2">
+                                <img
+                                  src={image}
+                                  alt="icon"
+                                  className="w-7 h-7 rounded-full"
+                                />
                               </span>
                               <span>ALL IN ONE</span>
 
                             </div>
-                            <p className="text-sm text-gray-500 pl-7">Here Some Description</p>
+                            <p className="text-sm text-gray-500 pl-7 font-normal">Here Some Description</p>
 
                           </a>
                         </li>
                         <li>
                           <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
                             <div className="flex items-center">
-                              <span className="rounded-full p-1 bg-orange-500 mr-2">
-                                <FaHandsHelping className="text-white" size={16} />
+                              <span className="mr-2">
+                                <img
+                                  src={image}
+                                  alt="icon"
+                                  className="w-7 h-7 rounded-full"
+                                />
                               </span>
                               <span>PART TIMER</span>
 
                             </div>
-                            <p className="text-sm text-gray-500">Here Some Description</p>
+                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
 
                           </a>
                         </li>
                         <li>
                           <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
                             <div className="flex items-center">
-                              <span className="rounded-full p-1 bg-orange-500 mr-2">
-                                <FaHandsHelping className="text-white" size={16} />
+                              <span className="mr-2">
+                                <img
+                                  src={image}
+                                  alt="icon"
+                                  className="w-7 h-7 rounded-full"
+                                />
                               </span>
                               <span>24 HRS ALL ROUNDER</span>
 
                             </div>
-                            <p className="text-sm text-gray-500">Here Some Description</p>
+                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
 
                           </a>
                         </li>
@@ -231,12 +277,13 @@ const Header = () => {
             </li>
 
 
-            <li className="relative group">
+            <li className="relative group text-gray-300">
               <NavLink
-                to="/pricing"
+                onClick={openComingSoon} 
                 className={({ isActive }) =>
-                  isActive ? "text-[#ff8800]" : "hover:text-[#ff8800]"
+                  isActive ? "text-gray-800" : "hover:text-[#ff8800]"
                 }
+                
               >
                 Pricing
               </NavLink>
@@ -260,7 +307,7 @@ const Header = () => {
           <div className="flex items-center space-x-4 md:space-x-10 text-md font-bold">
             <NavLink
               // to="/login"
-              onClick={togglePopup} 
+              onClick={openLoginPopup}
               className={({ isActive }) =>
                 isActive
                   ? "text-[#ff8800] font-bold underline"
@@ -271,13 +318,15 @@ const Header = () => {
             </NavLink>
 
             {/* Search Button on Large Screen */}
-            <button className="hidden md:block px-4 py-2 bg-[#ff8800] text-white font-medium rounded-lg border border-transparent transition-all duration-300 hover:bg-transparent hover:text-[#ff8800] hover:border-[#ff8800]">
+            <button
+               onClick={openComingSoon}
+              className="hidden md:block px-4 py-2 bg-[#ff8800] text-white font-medium rounded-lg border border-transparent transition-all duration-300 hover:bg-transparent hover:text-[#ff8800] hover:border-[#ff8800]">
               Search Job
             </button>
 
             {/* Cart Button */}
             <div className="relative">
-              <NavLink to="/cart" aria-label="Go to Cart">
+              <NavLink   onClick={openComingSoon} aria-label="Go to Cart" >
                 <IoCart className="text-[#ff8800] w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10" />
                 <span className="absolute -top-2 -right-2 bg-[#ff8800] text-white text-xs w-4 h-4 flex items-center justify-center rounded-full sm:w-4 sm:h-4 sm:text-sm md:w-5 md:h-5">
                   1
@@ -286,7 +335,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-
+        {isPopupOpen && <ComingSoon />}
         {/* Mobile Search Bar */}
         <div className="md:hidden w-full px-4 pb-3">
           <div className="relative flex items-center mt-3">
@@ -306,6 +355,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+
 
       {/* Mobile Menu */}
       <div
@@ -410,6 +460,10 @@ const Header = () => {
           </ul>
         </div>
       </div>
+       {/* Coming Soon Popup */}
+       {isComingSoonOpen && <ComingSoon onClose={closeComingSoon}/>}
+        {/* Login Popup */}
+        {isLoginPopupOpen && <LoginPopup onClose={closeLoginPopup}/>}
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Home = () => {
         <Cards />
         <Carousel />
         <Faq />
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     </>
   );
