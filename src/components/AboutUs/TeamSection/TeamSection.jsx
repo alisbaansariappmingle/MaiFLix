@@ -4,6 +4,7 @@ import image1 from '../../../images/designer.webp';
 import image2 from '../../../images/productdesigner.jpg';
 import image3 from '../../../images/engineer.jpg';
 import image4 from '../../../images/call cenetr.jpg';
+import image5 from '../../../images/chef2.webp';
 
 const TeamSection = () => {
   return (
@@ -33,12 +34,12 @@ const TeamSection = () => {
         {/* Team Member 2 */}
         <div className="text-center">
           <img
-            src={image1}
+            src={image5}
             alt="Team Member"
             className="w-40 h-40 mx-auto rounded-full mb-4 shadow-lg"
           />
           <h3 className="text-lg font-semibold">Sumith</h3>
-          <p className="text-gray-500 text-sm">Product Designer</p>
+          <p className="text-gray-500 text-sm">Chef Trainer</p>
         </div>
 
         {/* Team Member 3 */}
