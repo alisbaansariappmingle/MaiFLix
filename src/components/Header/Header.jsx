@@ -8,7 +8,8 @@ import logo from '../../images/logo.png';
 // import { FaHandsHelping } from "react-icons/fa";
 import LoginPopup from './LoginPopup';
 import image from '../../images/Figure_img-2.jpg';
-import ComingSoon from '../ComingSoon/ComingSoon'; 
+import ComingSoon from '../ComingSoon/ComingSoon';
+import MegaServices from "../Services/MegaServices";
 // import LoginPopup from './LoginPopup';
 
 
@@ -18,7 +19,7 @@ const Underline = () => (
 
 const Header = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isComingSoonOpen, setIsComingSoonOpen] = useState(false); 
+  const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
   const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
   const togglePopup = () => {
     setIsPopupOpen((prev) => !prev);
@@ -26,7 +27,7 @@ const Header = () => {
 
   const openComingSoon = () => {
     console.log(isComingSoonOpen);
-    
+
     setIsComingSoonOpen(!isComingSoonOpen);
   };
 
@@ -88,7 +89,7 @@ const Header = () => {
     <div className="relative w-full">
       {/* Main Navigation */}
       <nav className="bg-white shadow-md border-b border-gray-300 ">
-        <div className="flex items-center justify-between px-6 py-4">
+        <div className="flex items-center justify-between px-6 py-2">
           {/* Mobile Menu Button */}
           <button
             className="mobile-menu-button w-12 text-xl block md:hidden text-[#ff8800] font-bold h-9 focus:outline-none"
@@ -98,9 +99,11 @@ const Header = () => {
           </button>
 
           {/* Logo */}
-          <div className="flex items-center space-x-2 text-[#ff8800] font-bold text-2xl sm:text-3xl md:text-2xl lg:text-3xl">
-            <img src={logo} alt="Maiflix Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
-            <span>Maiflix</span>
+          <div className=" items-center  text-[#ff8800] font-bold text-2xl sm:text-3xl md:text-2xl lg:text-3xl">
+            <div className="flex flex-col">
+              <img src={logo} alt="Maiflix Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
+              <span className="text-sm">Maiflix Pvt Ltd.</span>
+            </div>
           </div>
           <button
             className="download-button w-12 text-3xl pl-2 block md:hidden text-[#ff8800] font-bold h-9 focus:outline-none"
@@ -279,11 +282,11 @@ const Header = () => {
 
             <li className="relative group text-gray-300">
               <NavLink
-                onClick={openComingSoon} 
+                onClick={openComingSoon}
                 className={({ isActive }) =>
                   isActive ? "text-gray-800" : "hover:text-[#ff8800]"
                 }
-                
+
               >
                 Pricing
               </NavLink>
@@ -319,20 +322,21 @@ const Header = () => {
 
             {/* Search Button on Large Screen */}
             <button
-               onClick={openComingSoon}
+              onClick={openComingSoon}
               className="hidden md:block px-4 py-2 bg-[#ff8800] text-white font-medium rounded-lg border border-transparent transition-all duration-300 hover:bg-transparent hover:text-[#ff8800] hover:border-[#ff8800]">
               Search Job
             </button>
 
             {/* Cart Button */}
             <div className="relative">
-              <NavLink   onClick={openComingSoon} aria-label="Go to Cart" >
-                <IoCart className="text-[#ff8800] w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10" />
-                <span className="absolute -top-2 -right-2 bg-[#ff8800] text-white text-xs w-4 h-4 flex items-center justify-center rounded-full sm:w-4 sm:h-4 sm:text-sm md:w-5 md:h-5">
+              <NavLink onClick={openComingSoon} aria-label="Go to Cart" >
+                <IoCart className="text-[#ff8800] w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-8" />
+                <span className="absolute -top-1 -right-1  bg-[#ff8800] text-white text-xs w-4 h-4 flex items-center justify-center rounded-full sm:w-4 sm:h-4 sm:text-sm md:w-4 md:h-4">
                   1
                 </span>
               </NavLink>
             </div>
+            
           </div>
         </div>
         {isPopupOpen && <ComingSoon />}
@@ -418,7 +422,7 @@ const Header = () => {
                   <div>
                     {/* <h4 className="text-lg font-semibold text-gray-800">Web Development</h4> */}
                     <ul className="space-y-2 text-xs text-gray-600">
-                      <li><NavLink to="/services/web-development" className="hover:text-[#ff8800]">DOMESTIC HELPER</NavLink></li>
+                      <li><NavLink onClick={MegaServices} className="hover:text-[#ff8800]">DOMESTIC HELPER</NavLink></li>
                       <li><NavLink to="/services/e-commerce" className="hover:text-[#ff8800]">COOK</NavLink></li>
                       <li><NavLink to="/services/custom-web-design" className="hover:text-[#ff8800]">BABYSITTER/ JAPA</NavLink></li>
                     </ul>
@@ -460,10 +464,10 @@ const Header = () => {
           </ul>
         </div>
       </div>
-       {/* Coming Soon Popup */}
-       {isComingSoonOpen && <ComingSoon onClose={closeComingSoon}/>}
-        {/* Login Popup */}
-        {isLoginPopupOpen && <LoginPopup onClose={closeLoginPopup}/>}
+      {/* Coming Soon Popup */}
+      {isComingSoonOpen && <ComingSoon onClose={closeComingSoon} />}
+      {/* Login Popup */}
+      {isLoginPopupOpen && <LoginPopup onClose={closeLoginPopup} />}
     </div>
   );
 };

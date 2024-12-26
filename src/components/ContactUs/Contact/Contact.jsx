@@ -38,12 +38,12 @@ const Contact = () => {
                     <div className="px-4 text-center lg:text-left">
                         <h5 className="text-orange-500 font-bold text-lg lg:text-xl">Contact Us</h5>
                         <h1 className="text-2xl lg:text-3xl font-semibold">Talk To Us</h1>
-                        <p className="text-sm lg:text-base">Your feedback is invaluable to us. If you have questions and suggestions, we're here to listen.  Please reach out to us below details:</p>
+                        <p className="text-sm lg:text-base">Your feedback is valuable to us. If you have questions and suggestions, we're here to listen.  Please reach out to us below details:</p>
                         <div className="flex items-center space-x-8 mt-4">
                             {/* Phone */}
                             <div className="flex items-center">
                                 <IoCall className="text-orange-500 mr-2 text-3xl" />
-                                <span className="text-sm lg:text-base">9079303071</span>
+                                <span className="text-sm lg:text-base">990581770</span>
                             </div>
 
                             {/* Email */}

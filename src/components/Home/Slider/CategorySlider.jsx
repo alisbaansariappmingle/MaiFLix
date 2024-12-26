@@ -3,26 +3,26 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Img from "../../../images/kitchen1.webp";
-import Electronic from "../../../images/electronics.jpeg";
-import Furniture from "../../../images/furniture.webp";
-import Womens from "../../../images/women.png";
-import Books from "../../../images/books.jpg";
-import Mens from "../../../images/men.webp";
-import Health from "../../../images/health.jpg";
-import Jewelry from "../../../images/jwelry.webp";
-import Game from "../../../images/games.webp";
+import Beauty from "../../../images/contentImage.jpeg";
+import Bathroom from "../../../images/toilet access.webp";
+import Womens from "../../../images/utility.avif";
+// import Books from "../../../images/books.jpg";
+// import Mens from "../../../images/men.webp";
+// import Health from "../../../images/health.jpg";
+// import Jewelry from "../../../images/jwelry.webp";
+// import Game from "../../../images/games.webp";
 
 // Sample categories
 const categories = [
-  { name: "Electronics", image: Electronic },
-  { name: "Furniture", image: Furniture },
-  { name: "Kitchen", image: Img },
-  { name: "Womens", image: Womens },
-  { name: "Books & Media", image: Books },
-  { name: "Mens", image: Mens },
-  { name: "Health & Wellness", image: Health },
-  { name: "Jewelry & Accessories", image: Jewelry },
-  { name: "Gaming", image: Game },
+  { name: "Beauty & Wellness", image: Beauty },
+  { name: "Toilet Accessories", image: Bathroom },
+  { name: "Kitchen Accessories", image: Img },
+  { name: "Utility Product", image: Womens },
+  // { name: "Books & Media", image: Books },
+  // { name: "Mens", image: Mens },
+  // { name: "Health & Wellness", image: Health },
+  // { name: "Jewelry & Accessories", image: Jewelry },
+  // { name: "Gaming", image: Game },
 ];
 
 const CategorySlider = () => {
@@ -32,7 +32,7 @@ const CategorySlider = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToScroll: 6,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [

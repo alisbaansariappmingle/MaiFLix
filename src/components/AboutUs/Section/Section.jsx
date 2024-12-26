@@ -3,16 +3,17 @@ import img from '../../../images/bannerimg.jpg';
 
 const Section = () => {
   return (
-    <section className="p-8">     
+    <>
+    <div className="text-center mt-5">
+    <h2 className="text-3xl font-bold ">Our Objectives</h2>
+    </div>
+     <section className="p-8">
+      
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-3xl font-bold mb-4">About Us</h2>
-          <p className="text-gray-700">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            <br />
-            <br />
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
+          <h2 className="text-3xl font-bold mb-4">Vision</h2>
+          <p className="text-gray-700 text-justify">
+            To empower unskilled labor through comprehensive training and sustainable employment opportunities, enabling them to enhance their livelihoods while delivering professional, reliable home management services to urban households. We envision creating a workforce that not only earns better but also benefits from essential healthcare, insurance, and financial security.</p>
         </div>
         {/* Left: Image */}
         <div className="w-full md:w-1/2">
@@ -23,7 +24,25 @@ const Section = () => {
           />
         </div>
       </div>
+
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* Left: Image */}
+        <div className="w-full md:w-1/2">
+          <img
+            src={img}
+            alt="Agency Workspace"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h2 className="text-3xl font-bold mb-4">Mission</h2>
+          <p className="text-gray-700 text-justify">
+          Our mission is to revolutionize the home management industry by providing high-quality, trained home managers to urban households. We aim to uplift unskilled labor by offering training, fair wages, and essential benefits such as medical facilities and insurance, ensuring they lead dignified, secure lives while contributing to better-managed homes</p>
+        </div>
+        
+      </div>
     </section>
+    </>
   );
 };
 

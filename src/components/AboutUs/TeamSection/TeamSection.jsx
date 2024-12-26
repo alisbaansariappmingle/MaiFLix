@@ -1,9 +1,9 @@
 import React from "react";
-import image from '../../../images/chef1.jpg';
-import image1 from '../../../images/chef2.webp';
-import image2 from '../../../images/chef3.jpg';
+import image from '../../../images/hr.webp';
+import image1 from '../../../images/designer.webp';
+import image2 from '../../../images/productdesigner.jpg';
 import image3 from '../../../images/engineer.jpg';
-import image4 from '../../../images/engineer.jpg';
+import image4 from '../../../images/call cenetr.jpg';
 
 const TeamSection = () => {
   return (
@@ -26,7 +26,7 @@ const TeamSection = () => {
             alt="Team Member"
             className="w-40 h-40 mx-auto rounded-full mb-4 shadow-lg"
           />
-          <h3 className="text-lg font-semibold">Albert</h3>
+          <h3 className="text-lg font-semibold">Shreya</h3>
           <p className="text-gray-500 text-sm">HR</p>
         </div>
 
@@ -48,7 +48,7 @@ const TeamSection = () => {
             alt="Team Member"
             className="w-40 h-40 mx-auto rounded-full mb-4 shadow-lg"
           />
-          <h3 className="text-lg font-semibold">Emily </h3>
+          <h3 className="text-lg font-semibold">Zoya Khan</h3>
           <p className="text-gray-500 text-sm">Marketing Manager</p>
         </div>
         <div className="text-center">
@@ -57,16 +57,16 @@ const TeamSection = () => {
             alt="Team Member"
             className="w-40 h-40 mx-auto rounded-full mb-4 shadow-lg"
           />
-          <h3 className="text-lg font-semibold">Albert</h3>
+          <h3 className="text-lg font-semibold">Aarush Singhaniya</h3>
           <p className="text-gray-500 text-sm">Software Engineer</p>
         </div>
         <div className="text-center">
           <img
-            src={image1}
+            src={image4}
             alt="Team Member"
             className="w-40 h-40 mx-auto rounded-full mb-4 shadow-lg"
           />
-          <h3 className="text-lg font-semibold">Albert</h3>
+          <h3 className="text-lg font-semibold">Aditya</h3>
           <p className="text-gray-500 text-sm">Customer Care</p>
         </div>
         
