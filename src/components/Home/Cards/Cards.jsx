@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 import { FaTag, FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import img1 from "../../../images/facewash.avif";
-import img2 from "../../../images/safola oil.avif";
-import img3 from "../../../images/soap1.avif";
-import img4 from "../../../images/fruits.avif";
-import img5 from "../../../images/electric.avif";
+import img2 from "../../../images/toilettissue.avif";
+import img3 from "../../../images/beauty1.avif";
+import img4 from "../../../images/kitchen2.avif";
+import img5 from "../../../images/kitchen.avif";
+import img6 from "../../../images/roll.avif";
+import img7 from "../../../images/makeup.avif";
 import { MdRemoveRedEye } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
 import { BiSolidOffer } from "react-icons/bi";
@@ -55,7 +57,7 @@ const Cards = () => {
     },
     {
       id: 4,
-      name: "Product 5",
+      name: "Product 4",
       description: "This is a sample description for product 2.",
       featured_image: img4,
       rating: 3.5,
@@ -64,34 +66,34 @@ const Cards = () => {
     },
     {
       id: 5,
-      name: "Product 6",
+      name: "Product 5",
       description: "This is a sample description for product 2.",
-      featured_image: img5,
+      featured_image: img6,
       rating: 3.5,
       price: 250,
       oldPrice: 300,
     },
     {
       id: 6,
-      name: "Product 7",
+      name: "Product 6",
       description: "This is a sample description for product 2.",
-      featured_image: img1,
+      featured_image: img5,
       rating: 4.8,
       price: 250,
       oldPrice: 300,
     },
     {
       id: 7,
-      name: "Product 8",
+      name: "Product 7",
       description: "This is a sample description for product 2.",
-      featured_image: img4,
+      featured_image: img7,
       rating: 4.9,
       price: 250,
       oldPrice: 300,
     },
     {
       id: 8,
-      name: "Product 9",
+      name: "Product 8",
       description: "This is a sample description for product 2.",
       featured_image: img3,
       rating: 5,
