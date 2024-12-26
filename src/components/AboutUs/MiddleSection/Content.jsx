@@ -7,7 +7,7 @@ const Content = () => {
       {/* Heading Content */}
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4">About Maiflix</h2>
-        <p className="font-bold text-md">Seamless home solutions with trained certified verified home managers</p>
+        {/* <p className="font-bold text-md">Seamless home solutions with trained certified verified home managers</p> */}
 
         <h3></h3>
         <p className="text-gray-500">

@@ -32,7 +32,7 @@ const CategorySlider = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToScroll: 5,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
