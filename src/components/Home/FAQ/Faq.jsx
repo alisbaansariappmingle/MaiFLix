@@ -6,7 +6,7 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: 'How can I hire a housemaid/babysitter/cook from Broomees?',
+      question: 'How can I hire a housemaid/babysitter/cook from Maiflix?',
       answer: 'You can hire domestic help through our simple process: Fill out the requirement form, browse through verified profiles, schedule interviews, and select your preferred candidate. Our team will assist you throughout the process.'
     },
     {
@@ -22,7 +22,7 @@ const Faq = () => {
       answer: 'Our prices reflect the quality and reliability we offer. All our staff undergo thorough background checks, training, and are professionally managed. We ensure compliance with labor laws and provide insurance coverage.'
     },
     {
-      question: 'Is a maid/cook/babysitter from Broomees reliable?',
+      question: 'Is a maid/cook/babysitter from Maiflix reliable?',
       answer: 'Yes, we ensure reliability through strict verification processes, including background checks, skill assessment, and reference verification. We maintain ongoing quality control and provide support throughout the service period.'
     },
     {

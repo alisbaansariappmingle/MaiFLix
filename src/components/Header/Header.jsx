@@ -9,7 +9,7 @@ import logo from '../../images/logo.png';
 import LoginPopup from './LoginPopup';
 import image from '../../images/Figure_img-2.jpg';
 import ComingSoon from '../ComingSoon/ComingSoon';
-import MegaServices from "../Services/MegaServices";
+import MegaServices from "../Services/MegaServices/MegaServices";
 // import LoginPopup from './LoginPopup';
 
 
@@ -102,7 +102,7 @@ const Header = () => {
           <div className=" items-center  text-[#ff8800] font-bold text-2xl sm:text-3xl md:text-2xl lg:text-3xl">
             <div className="flex flex-col">
               <img src={logo} alt="Maiflix Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
-              <span className="text-sm">Maiflix Pvt Ltd.</span>
+              <span className="text-sm  whitespace-nowrap ">Maiflix </span>
             </div>
           </div>
           <button
@@ -156,128 +156,144 @@ const Header = () => {
               </button>
               <Underline />
 
-              {/* Mega Menu - Shows on hover */}
-              <div className="relative group">
-                {/* <div className="relative top-[20px] left-1/2 transform -translate-x-2/2 w-4 h-4 bg-white rotate-45 shadow"></div> */}
+              {/* Mega Menu */}
+              <div className="absolute top-full mt-6 bg-white shadow-lg rounded-lg w-[600px] opacity-0 invisible transition-all duration-300 z-20 left-1/2 transform -translate-x-1/2 group-hover:opacity-100 group-hover:visible">
+                <div className="grid grid-cols-2 gap-6 px-6 py-6">
+                  <div>
+                    <ul className="space-y-4 text-sm text-gray-600">
+                      <li>
+                        <a
+                          href="/megamenu"
+                          className="hover:text-orange-500 flex flex-col items-start space-y-2"
+                        >
+                          <div className="flex items-center">
+                            <span className="mr-2">
+                              <img
+                                src={image}
+                                alt="icon"
+                                className="w-7 h-7 rounded-full"
+                              />
+                            </span>
+                            <span>DOMESTIC HELPER</span>
+                          </div>
+                          <p className="text-sm text-gray-500 pl-7 font-normal">
+                            Here Some Description
+                          </p>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/megamenu"
+                          className="hover:text-orange-500 flex flex-col items-start space-y-2"
+                        >
+                          <div className="flex items-center">
+                            <span className="mr-2">
+                              <img
+                                src={image}
+                                alt="icon"
+                                className="w-7 h-7 rounded-full"
+                              />
+                            </span>
+                            <span>BABYSITTER/JAPA</span>
+                          </div>
+                          <p className="text-sm text-gray-500 pl-7 font-normal">
+                            Here Some Description
+                          </p>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/megamenu"
+                          className="hover:text-orange-500 flex flex-col items-start space-y-2"
+                        >
+                          <div className="flex items-center">
+                            <span className="mr-2">
+                              <img
+                                src={image}
+                                alt="icon"
+                                className="w-7 h-7 rounded-full"
+                              />
+                            </span>
+                            <span>COOK</span>
+                          </div>
+                          <p className="text-sm text-gray-500 pl-7 font-normal">
+                            Here Some Description
+                          </p>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </div>
 
-                <div className="absolute top-full mt-6 bg-white shadow-lg rounded-lg w-[600px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 left-1/2 transform -translate-x-1/2">
-                  <div className="grid grid-cols-2 gap-6 px-6 py-6">
-                    <div>
-                      <ul className="space-y-4 text-sm text-gray-600">
-                        <li>
-                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
-                            <div className="flex items-center">
-                              <span className="mr-2">
-                                <img
-                                  src={image}
-                                  alt="icon"
-                                  className="w-7 h-7 rounded-full"
-                                />
-                              </span>
-                              <span>DOMESTIC HELPER</span>
-
-                            </div>
-                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
-                            <div className="flex items-center">
-                              <span className="mr-2">
-                                <img
-                                  src={image}
-                                  alt="icon"
-                                  className="w-7 h-7 rounded-full"
-                                />
-                              </span>
-                              <span>BABYSITTER/JAPA</span>
-
-                            </div>
-                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
-
-                          </a>
-                        </li>
-
-                        <li>
-                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
-                            <div className="flex items-center">
-                              <span className="mr-2">
-                                <img
-                                  src={image}
-                                  alt="icon"
-                                  className="w-7 h-7 rounded-full"
-                                />
-                              </span>
-                              <span>COOK</span>
-
-                            </div>
-                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
-
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <ul className="space-y-4 text-sm text-gray-600">
-                        <li>
-                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
-                            <div className="flex items-center">
-                              <span className="mr-2">
-                                <img
-                                  src={image}
-                                  alt="icon"
-                                  className="w-7 h-7 rounded-full"
-                                />
-                              </span>
-                              <span>ALL IN ONE</span>
-
-                            </div>
-                            <p className="text-sm text-gray-500 pl-7 font-normal">Here Some Description</p>
-
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
-                            <div className="flex items-center">
-                              <span className="mr-2">
-                                <img
-                                  src={image}
-                                  alt="icon"
-                                  className="w-7 h-7 rounded-full"
-                                />
-                              </span>
-                              <span>PART TIMER</span>
-
-                            </div>
-                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
-
-                          </a>
-                        </li>
-                        <li>
-                          <a href="/services/cook" className="hover:text-orange-500 flex flex-col items-start space-y-2">
-                            <div className="flex items-center">
-                              <span className="mr-2">
-                                <img
-                                  src={image}
-                                  alt="icon"
-                                  className="w-7 h-7 rounded-full"
-                                />
-                              </span>
-                              <span>24 HRS ALL ROUNDER</span>
-
-                            </div>
-                            <p className="text-sm text-gray-500  pl-7 font-normal">Here Some Description</p>
-
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                  <div>
+                    <ul className="space-y-4 text-sm text-gray-600">
+                      <li>
+                        <a
+                          href="/services/all-in-one"
+                          className="hover:text-orange-500 flex flex-col items-start space-y-2"
+                        >
+                          <div className="flex items-center">
+                            <span className="mr-2">
+                              <img
+                                src={image}
+                                alt="icon"
+                                className="w-7 h-7 rounded-full"
+                              />
+                            </span>
+                            <span>ALL IN ONE</span>
+                          </div>
+                          <p className="text-sm text-gray-500 pl-7 font-normal">
+                            Here Some Description
+                          </p>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/megamenu"
+                          className="hover:text-orange-500 flex flex-col items-start space-y-2"
+                        >
+                          <div className="flex items-center">
+                            <span className="mr-2">
+                              <img
+                                src={image}
+                                alt="icon"
+                                className="w-7 h-7 rounded-full"
+                              />
+                            </span>
+                            <span>PART TIMER</span>
+                          </div>
+                          <p className="text-sm text-gray-500 pl-7 font-normal">
+                            Here Some Description
+                          </p>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/megamenu"
+                          className="hover:text-orange-500 flex flex-col items-start space-y-2"
+                        >
+                          <div className="flex items-center">
+                            <span className="mr-2">
+                              <img
+                                src={image}
+                                alt="icon"
+                                className="w-7 h-7 rounded-full"
+                              />
+                            </span>
+                            <span>24 HRS ALL ROUNDER</span>
+                          </div>
+                          <p className="text-sm text-gray-500 pl-7 font-normal">
+                            Here Some Description
+                          </p>
+                        </a>
+                      </li>
+                      
+                    </ul>
                   </div>
                 </div>
               </div>
-
             </li>
+
 
 
             <li className="relative group text-gray-300">
@@ -313,7 +329,7 @@ const Header = () => {
               onClick={openLoginPopup}
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#ff8800] font-bold underline"
+                  ? "text-[#ff8800] font-bold"
                   : "text-[#ff8800] hover:underline"
               }
             >
@@ -336,7 +352,7 @@ const Header = () => {
                 </span>
               </NavLink>
             </div>
-            
+
           </div>
         </div>
         {isPopupOpen && <ComingSoon />}
@@ -422,7 +438,7 @@ const Header = () => {
                   <div>
                     {/* <h4 className="text-lg font-semibold text-gray-800">Web Development</h4> */}
                     <ul className="space-y-2 text-xs text-gray-600">
-                      <li><NavLink onClick={MegaServices} className="hover:text-[#ff8800]">DOMESTIC HELPER</NavLink></li>
+                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]">DOMESTIC HELPER</NavLink></li>
                       <li><NavLink to="/services/e-commerce" className="hover:text-[#ff8800]">COOK</NavLink></li>
                       <li><NavLink to="/services/custom-web-design" className="hover:text-[#ff8800]">BABYSITTER/ JAPA</NavLink></li>
                     </ul>

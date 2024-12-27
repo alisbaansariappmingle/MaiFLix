@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import AboutBanner from "./components/AboutUs/AboutUs";
 import Contact from "./components/ContactUs/Contact/Contact";
 import PopupForm from "./components/PopupForm";
+import MegaServices from "./components/Services/MegaServices/MegaServices";
 
 const App = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false); 
@@ -31,6 +32,7 @@ const App = () => {
         <Route element={<CommonLayout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<AboutBanner />} />
+          <Route path="/megamenu" element={<MegaServices/>}/>
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>

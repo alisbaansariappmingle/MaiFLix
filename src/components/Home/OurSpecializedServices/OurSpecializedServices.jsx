@@ -22,34 +22,34 @@ const OurSpecializedServices = () => {
 
   const services = [
     {
-      img: require("../../../images/Figure_img-1.jpg"),
+      img: require("../../../images/domestic helper.jpg"),
       title: "Domestic Helper",
-      rating: 2.3,
+      rating: 5,
     },
     {
-      img: require("../../../images/Figure_img-2.jpg"),
+      img: require("../../../images/cook (2).png"),
       title: "Cook",
-      rating: 4.8,
+      rating: 5,
     },
     {
-      img: require("../../../images/Figure_img-3.jpg"),
+      img: require("../../../images/caretaker.png"),
       title: "Babysitter/ Japa",
-      rating: 3.9,
+      rating: 5,
     },
     {
-      img: require("../../../images/Figure_img-4.jpg"),
+      img: require("../../../images/allinone.png"),
       title: "All in One",
-      rating: 4.7,
+      rating: 5,
     },
     {
-      img: require("../../../images/Figure_img-5.jpg"),
+      img: require("../../../images/allrounder.jpg"),
       title: "24 Hrs Allrounder",
-      rating: 4.4,
+      rating: 5,
     },
     {
-      img: require("../../../images/Figure_img-1.jpg"),
+      img: require("../../../images/parttime.png"),
       title: "Part Time",
-      rating: 3.1,
+      rating: 5,
     },
   ];
 

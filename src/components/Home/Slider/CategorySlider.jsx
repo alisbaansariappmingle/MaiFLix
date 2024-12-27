@@ -6,11 +6,9 @@ import Img from "../../../images/kitchen1.webp";
 import Beauty from "../../../images/contentImage.jpeg";
 import Bathroom from "../../../images/toilet access.webp";
 import Womens from "../../../images/utility.avif";
-// import Books from "../../../images/books.jpg";
-// import Mens from "../../../images/men.webp";
-// import Health from "../../../images/health.jpg";
-// import Jewelry from "../../../images/jwelry.webp";
-// import Game from "../../../images/games.webp";
+import yoga from "../../../images/yogamat.avif";
+import spa from "../../../images/spa.jpg";
+
 
 // Sample categories
 const categories = [
@@ -18,11 +16,9 @@ const categories = [
   { name: "Toilet Accessories", image: Bathroom },
   { name: "Kitchen Accessories", image: Img },
   { name: "Utility Product", image: Womens },
-  // { name: "Books & Media", image: Books },
-  // { name: "Mens", image: Mens },
-  // { name: "Health & Wellness", image: Health },
-  // { name: "Jewelry & Accessories", image: Jewelry },
-  // { name: "Gaming", image: Game },
+   { name: "Spa", image: spa },
+   { name: "Yoga", image: yoga },
+  
 ];
 
 const CategorySlider = () => {
@@ -32,7 +28,7 @@ const CategorySlider = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [

@@ -1,5 +1,6 @@
 import React from "react";
-import img from '../../../images/bannerimg.jpg';
+import img from '../../../images/kitchen2.jpg';
+import img1 from '../../../images/kitchen3.webp';
 
 const Section = () => {
   return (
@@ -29,7 +30,7 @@ const Section = () => {
         {/* Left: Image */}
         <div className="w-full md:w-1/2">
           <img
-            src={img}
+            src={img1}
             alt="Agency Workspace"
             className="rounded-lg shadow-lg"
           />

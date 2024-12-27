@@ -36,25 +36,25 @@ const Contact = () => {
                 {/* Image Column */}
                 <div className="flex justify-center items-center flex-col space-y-4 lg:space-y-0">
                     <div className="px-4 text-center lg:text-left">
-                        <h5 className="text-orange-500 font-bold text-lg lg:text-xl">Contact Us</h5>
+                        <h5 className="text-[#ff8800] font-bold text-lg lg:text-xl">Contact Us</h5>
                         <h1 className="text-2xl lg:text-3xl font-semibold">Talk To Us</h1>
                         <p className="text-sm lg:text-base">Your feedback is valuable to us. If you have questions and suggestions, we're here to listen.  Please reach out to us below details:</p>
                         <div className="flex items-center space-x-8 mt-4">
                             {/* Phone */}
                             <div className="flex items-center">
-                                <IoCall className="text-orange-500 mr-2 text-3xl" />
+                                <IoCall className="text-[#ff8800] mr-2 text-3xl" />
                                 <span className="text-sm lg:text-base">990581770</span>
                             </div>
 
                             {/* Email */}
                             <div className="flex items-center">
-                                <IoMail className="text-orange-500 mr-2 text-3xl" />
+                                <IoMail className="text-[#ff8800] mr-2 text-3xl" />
                                 <span className="text-sm lg:text-base">info@maiflix.in</span>
                             </div>
                         </div>
                         {/* Address */}
                         <div className="flex items-center pt-3">
-                            <FaLocationDot className="text-orange-500 mr-2 text-3xl" />
+                            <FaLocationDot className="text-[#ff8800] mr-2 text-3xl" />
                             <span className="text-sm lg:text-base">1206,Suryakiran Building, 19 K G Marg New Delhi-110001.</span>
                         </div>
 
@@ -142,7 +142,7 @@ const Contact = () => {
                         <div>
                             <button
                                 type="submit"
-                                className="w-full sm:w-1/2 md:w-1/3 bg-orange-500 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
+                                className="w-full sm:w-1/2 md:w-1/3 bg-[#ff8800] text-white font-bold py-3 rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
                                 disabled={isSubmitting}
                             >
                                 {isSubmitting ? "Sending..." : "Send Message"}
