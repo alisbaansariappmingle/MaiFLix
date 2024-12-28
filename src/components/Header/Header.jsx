@@ -42,6 +42,7 @@ const Header = () => {
     setIsLoginPopupOpen(false);
   };
 
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -156,7 +157,7 @@ const Header = () => {
               </button>
               <Underline />
 
-              {/* Mega Menu */}
+              {/* Mega Menu for large screen */}
               <div className="absolute top-full mt-6 bg-white shadow-lg rounded-lg w-[600px] opacity-0 invisible transition-all duration-300 z-20 left-1/2 transform -translate-x-1/2 group-hover:opacity-100 group-hover:visible">
                 <div className="grid grid-cols-2 gap-6 px-6 py-6">
                   <div>
@@ -221,7 +222,7 @@ const Header = () => {
                           </p>
                         </a>
                       </li>
-                      
+
                     </ul>
                   </div>
 
@@ -287,7 +288,7 @@ const Header = () => {
                           </p>
                         </a>
                       </li>
-                      
+
                     </ul>
                   </div>
                 </div>
@@ -355,6 +356,7 @@ const Header = () => {
 
           </div>
         </div>
+
         {isPopupOpen && <ComingSoon />}
         {/* Mobile Search Bar */}
         <div className="md:hidden w-full px-4 pb-3">
@@ -438,17 +440,18 @@ const Header = () => {
                   <div>
                     {/* <h4 className="text-lg font-semibold text-gray-800">Web Development</h4> */}
                     <ul className="space-y-2 text-xs text-gray-600">
-                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]">DOMESTIC HELPER</NavLink></li>
-                      <li><NavLink to="/services/e-commerce" className="hover:text-[#ff8800]">COOK</NavLink></li>
-                      <li><NavLink to="/services/custom-web-design" className="hover:text-[#ff8800]">BABYSITTER/ JAPA</NavLink></li>
+                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]" onClick={() => setMobileMenuOpen(false)}>DOMESTIC HELPER
+                      </NavLink></li>
+                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]" onClick={() => setMobileMenuOpen(false)}>COOK</NavLink></li>
+                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]" onClick={() => setMobileMenuOpen(false)}>BABYSITTER/ JAPA</NavLink></li>
                     </ul>
                   </div>
                   <div>
                     {/* <h4 className="text-lg font-semibold text-gray-800">Mobile Development</h4> */}
                     <ul className="space-y-2 text-xs text-gray-600">
-                      <li><NavLink to="/services/mobile-development" className="hover:text-[#ff8800]">ALL IN ONE</NavLink></li>
-                      <li><NavLink to="/services/android-apps" className="hover:text-[#ff8800]">PART TIMER</NavLink></li>
-                      <li><NavLink to="/services/ios-apps" className="hover:text-[#ff8800]"> 24 Hrs ALL ROUNDERE</NavLink></li>
+                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]" onClick={() => setMobileMenuOpen(false)}>ALL IN ONE</NavLink></li>
+                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]" onClick={() => setMobileMenuOpen(false)}>PART TIMER</NavLink></li>
+                      <li><NavLink to="/megamenu" className="hover:text-[#ff8800]" onClick={() => setMobileMenuOpen(false)}> 24 Hrs ALL ROUNDERE</NavLink></li>
                     </ul>
                   </div>
 

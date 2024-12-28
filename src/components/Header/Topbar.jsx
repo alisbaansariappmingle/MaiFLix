@@ -13,10 +13,9 @@ const Topbar = () => {
 
     return (
         <div className="bg-[#ff8800] text-white">
-            <div className="container mx-auto flex items-center py-2 px-4">
-                
+            <div className="container mx-auto flex items-center py-1 px-2 md:px-4">
                 {/* Right Section: Call Icon and Social Media Icons */}
-                <div className="ml-auto flex items-center space-x-6">
+                <div className="ml-auto flex items-center space-x-4 md:space-x-6">
                     {/* Contact Number with Call Icon */}
                     <a
                         href="tel:+91990581770"
@@ -24,7 +23,7 @@ const Topbar = () => {
                         aria-label="Call"
                     >
                         <MdAddIcCall size={26} className="text-orange-500 bg-white p-1 rounded-full" />
-                        <span>+91 990581770</span>
+                        <span className="text-sm md:text-md">+91 990581770</span>
                     </a>
 
                     {/* Social Media Icons */}

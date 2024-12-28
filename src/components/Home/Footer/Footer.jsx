@@ -50,7 +50,7 @@ const Footer = () => {
                         />
                         <h3 className="text-sm font-semibold ">Maiflix Services Private Limited</h3>
                     </div>
-                    <p className="text-white text-xs whitespace-nowrap">{footerData.companyInfo.address}</p>
+                    <p className="text-white text-xs  md:whitespace-nowrap">{footerData.companyInfo.address}</p>
                     <div className="mt-4 space-y-2">
                         <div className="flex items-center text-white text-sm">
                             <MdAddIcCall
@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
 
                 {/* Quick Links */}
-                <div className='pl-10'>
+                <div className="pl-0 md:pl-10">
                     <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
                     <ul className="space-y-2 text-white text-sm">
                         {footerData.quickLinks.map((link, index) => (
@@ -121,7 +121,7 @@ const Footer = () => {
             {/* Bottom Section */}
             <div className="bg-gray-800 py-4">
                 <div className="max-w-7xl mx-auto px-6 flex flex-col justify-center items-center text-gray-400 text-sm">
-                    <p className="text-center">&copy; 2024 All Rights Reserved.</p>
+                    <p className="text-center">&copy; Powered By Optimizaum</p>
                 </div>
             </div>
         </footer>

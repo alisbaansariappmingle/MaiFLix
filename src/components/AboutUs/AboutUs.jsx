@@ -1,8 +1,9 @@
 import React from 'react';
 import AboutBanner from './Banner/AboutBanner';
-import Content from './MiddleSection/Content';
+import Content from './AboutMaiflix/Content';
 import TeamSection from './TeamSection/TeamSection';
-import Section from './Section/Section';
+import Vision from './OurObjectives/Vision';
+import Mission from './OurObjectives/Mission';
 const AboutUs = () => {
   return (
     <>
@@ -10,7 +11,8 @@ const AboutUs = () => {
         <AboutBanner />
         <Content />
         <TeamSection />
-        <Section />
+        <Vision />
+        <Mission/>
       </div>
     </>
   );

@@ -38,7 +38,7 @@ const Faq = () => {
   return (
     <div className=" mx-auto p-6 sm:p-8 md:p-10 bg-white rounded-lg shadow-lg">
       <h1 className="text-3xl font-bold text-gray-800 px-4 sm:px-6 lg:px-9">FAQs</h1>
-      <div className="space-y-4 p-4 sm:p-6 md:p-10">
+      <div className="space-y-4 p-0 sm:p-6 md:p-10">
         {faqs.map((faq, index) => (
           <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
             <button
