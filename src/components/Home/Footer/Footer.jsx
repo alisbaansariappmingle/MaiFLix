@@ -121,7 +121,7 @@ const Footer = () => {
             {/* Bottom Section */}
             <div className="bg-gray-800 py-4">
                 <div className="max-w-7xl mx-auto px-6 flex flex-col justify-center items-center text-gray-400 text-sm">
-                    <p className="text-center">&copy; Powered By Optimizaum</p>
+                    <p className="text-center">Copyright &copy; Powered By Optimizaum</p>
                 </div>
             </div>
         </footer>
