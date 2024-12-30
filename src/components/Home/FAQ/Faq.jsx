@@ -15,7 +15,7 @@ const Faq = () => {
     },
     {
       question: 'How much will a cook/maid/babysitter cost in Delhi NCR?',
-      answer: 'The costs vary based on requirements, experience, and working hours. Typically, rates range from ₹12,000 to ₹25,000 per month for full-time help. Contact us for a detailed quote.'
+      answer: 'The costs vary based on requirements, experience, and working hours. Typically, rates range from ₹12,000 to ₹18,000 per month for full-time help. Contact us for a detailed quote.'
     },
     {
       question: 'Why do your services seem more expensive than other helpers in the market?',
@@ -25,10 +25,7 @@ const Faq = () => {
       question: 'Is a maid/cook/babysitter from Maiflix reliable?',
       answer: 'Yes, we ensure reliability through strict verification processes, including background checks, skill assessment, and reference verification. We maintain ongoing quality control and provide support throughout the service period.'
     },
-    {
-      question: 'Is it safe to hire a maid/cook/babysitter during the pandemic?',
-      answer: 'We follow all COVID-19 safety protocols. Our staff is regularly tested, vaccinated, and trained in safety measures. We maintain strict hygiene standards and provide safety equipment as needed.'
-    }
+    
   ];
 
   const toggleFAQ = (index) => {

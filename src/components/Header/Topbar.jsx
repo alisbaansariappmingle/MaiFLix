@@ -18,12 +18,12 @@ const Topbar = () => {
                 <div className="ml-auto flex items-center space-x-4 md:space-x-6">
                     {/* Contact Number with Call Icon */}
                     <a
-                        href="tel:+91990581770"
+                        href="tel:+919958190770"
                         className="flex items-center space-x-2 text-white"
                         aria-label="Call"
                     >
                         <MdAddIcCall size={26} className="text-orange-500 bg-white p-1 rounded-full" />
-                        <span className="text-sm md:text-md">+91 990581770</span>
+                        <span className="text-sm md:text-md">+91 9958190770</span>
                     </a>
 
                     {/* Social Media Icons */}

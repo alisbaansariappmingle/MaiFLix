@@ -3,7 +3,8 @@ import logo from '../../../images/logo.png';
 import { FaTwitter } from "react-icons/fa";
 import { MdAddIcCall } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { RiInstagramFill } from "react-icons/ri";
+// import { RiInstagramFill } from "react-icons/ri";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
 const Footer = () => {
@@ -12,28 +13,29 @@ const Footer = () => {
             name: "Maiflix Services Private Limited",
             address: "1206, Suryakiran Building, 19 K G Marg, New Delhi - 110001.",
             contact: {
-                phone: "+91-990581770",
+                phone: "+91-9958190770",
                 email: "info@maiflix.in",
             },
         },
         quickLinks: [
             { name: "About Us", href: "/about" },
-            { name: "Services", href: "/products" },
+            { name: "Services", href: "/megamenu" },
             { name: "FAQs", href: "/faq" },
             { name: "Contact Us", href: "/contact" },
         ],
         customerSupport: [
-            { name: "Shipping Policy", href: "/shipping" },
-            { name: "Returns Policy", href: "/returns" },
-            { name: "Terms & Conditions", href: "/terms" },
-            { name: "Privacy Policy", href: "/privacy" },
+            { name: "Shipping Policy", href: "/privacy-policy" },
+            { name: "Returns Policy", href: "/privacy-policy" },
+            { name: "Terms & Conditions", href: "/privacy-policy" },
+            { name: "Privacy Policy", href: "/privacy-policy" },
         ],
         socialLinks: [
-            { icon: <IoLogoWhatsapp size={25} />, href: "https://wa.me/91990581770" },
-            { icon: <MdAddIcCall size={25} />, href: "tel:+91990581770" },
-            { icon: <RiInstagramFill size={25} />, href: "https://www.instagram.com/yourusername" },
-            { icon: <FaTwitter size={25} />, href: "https://twitter.com/yourusername" },
-            
+            { icon: <IoLogoWhatsapp size={25} />, href: "https://wa.me/+919958190770" },
+            { icon: <FaFacebookF size={24}/>, href: "https://facebook.com/yourprofile", ariaLabel: "Facebook" },
+            { icon: <FaTwitter size={25} />, href: "https://twitter.com/yourprofile", ariaLabel: "Twitter" },
+            { icon: <FaInstagram  size={25}/>, href: "https://instagram.com/yourusername", ariaLabel: "Instagram" },
+            { icon: <FaLinkedinIn  size={25}/>, href: "https://linkedin.com/in/yourprofile", ariaLabel: "LinkedIn" },
+
         ],
     };
 

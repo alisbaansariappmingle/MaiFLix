@@ -43,7 +43,7 @@ const Contact = () => {
                             {/* Phone */}
                             <div className="flex items-center">
                                 <IoCall className="text-[#ff8800] mr-2 text-3xl" />
-                                <span className="text-sm lg:text-base">990581770</span>
+                                <span className="text-sm lg:text-base">+91 9958190770</span>
                             </div>
 
                             {/* Email */}

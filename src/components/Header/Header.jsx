@@ -230,7 +230,7 @@ const Header = () => {
                     <ul className="space-y-4 text-sm text-gray-600">
                       <li>
                         <a
-                          href="/services/all-in-one"
+                          href="/megamenu"
                           className="hover:text-orange-500 flex flex-col items-start space-y-2"
                         >
                           <div className="flex items-center">
@@ -297,9 +297,10 @@ const Header = () => {
 
 
 
-            <li className="relative group text-gray-300">
+            <li className="relative group text-gray-800">
               <NavLink
-                onClick={openComingSoon}
+              to="/pricing"
+                // onClick={openComingSoon}
                 className={({ isActive }) =>
                   isActive ? "text-gray-800" : "hover:text-[#ff8800]"
                 }

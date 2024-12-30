@@ -10,7 +10,7 @@ const services = [
 const ServiceList = () => {
   return (
     <div className="w-full md:w-1/4 bg-white shadow-md rounded-lg p-4 border">
-      <h2 className="text-xl font-semibold mb-4">Domestic Helper</h2>
+      <h2 className="text-xl font-semibold mb-4">Other Services</h2>
       <div className="grid grid-cols-2 gap-4">
         {services.map((service) => (
           <div

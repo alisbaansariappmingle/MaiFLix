@@ -10,6 +10,7 @@ const HeroSection = () => {
 
     return (
         <div className="flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 py-8 sm:py-12 bg-white space-y-6 lg:space-y-0 lg:space-x-8">
+            
             {/* Text Section */}
             <div className="text-center lg:text-left max-w-lg">
                 <h1 className="text-3xl sm:text-4xl font-bold text-black">
@@ -28,7 +29,7 @@ const HeroSection = () => {
             </div>
 
             {/* Image Section */}
-            <div className="relative flex items-center justify-center w-full max-w-md lg:max-w-xl -order-3 lg:order-0">
+            <div className="relative flex items-center justify-center w-full max-w-md lg:max-w-xl">
                 <img
                     src={imageSrc}
                     alt="Services"

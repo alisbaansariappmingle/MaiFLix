@@ -7,6 +7,9 @@ import AboutBanner from "./components/AboutUs/AboutUs";
 import Contact from "./components/ContactUs/Contact/Contact";
 import PopupForm from "./components/PopupForm";
 import MegaServices from "./components/Services/MegaServices/MegaServices";
+import Policy from "./components/PrivacyPolicy/Policy";
+import ShippingPolicy from "./components/PrivacyPolicy/ShippingPolicy";
+import PricingTable from "./components/Pricing/PricingTable";
 
 const App = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false); 
@@ -33,7 +36,10 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<AboutBanner />} />
           <Route path="/megamenu" element={<MegaServices/>}/>
+          <Route path="/pricing" element={<PricingTable/>}/>
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<Policy/>}/>
+          <Route path="/shipping-policy" element={<ShippingPolicy/>}/>
         </Route>
       </Routes>
     </>
